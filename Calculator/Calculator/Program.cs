@@ -29,15 +29,10 @@
                     string[] sonlar = amal.Split('/');
                     Console.WriteLine(int.Parse(sonlar[0]) / int.Parse(sonlar[1]));
                 }
-                else if (!amal.Contains("%"))
-                {
-                    string[] sonlar = amal.Split('%');
-                    Console.WriteLine(int.Parse(sonlar[0]) % int.Parse(sonlar[1]));
-                }
                 else if (amal.Contains("^"))
                 {
                     string[] sonlar = amal.Split('^');
-                    Console.WriteLine(int.Parse(sonlar[0]) ^ int.Parse(sonlar[1]));
+                    Console.WriteLine(Math.Pow(int.Parse(sonlar[0]),int.Parse(sonlar[1])));
                 }
                 Console.WriteLine("<- TUGATISH     DAVOM ETISH->");
                 var key = Console.ReadKey();
